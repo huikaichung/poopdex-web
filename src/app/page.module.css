@@ -1,0 +1,294 @@
+.main {
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.logo {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+/* Upload */
+.uploadSection {
+  margin: 20px 0;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--accent);
+  border-radius: 20px;
+  padding: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.uploadButton:hover {
+  transform: scale(1.02);
+}
+
+.uploadIcon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.uploadText {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.uploadHint {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Preview */
+.previewSection {
+  margin: 20px 0;
+}
+
+.preview {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.previewActions {
+  display: flex;
+  gap: 12px;
+}
+
+.primaryButton, .secondaryButton {
+  flex: 1;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.primaryButton {
+  background: var(--accent);
+  color: white;
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  background: var(--card);
+  color: white;
+  border: 1px solid #333;
+}
+
+/* Result */
+.resultSection {
+  margin: 20px 0;
+}
+
+.resultCard {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.scoreRing {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  background: var(--success);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreRing[data-score^="9"], .scoreRing[data-score="100"] {
+  background: var(--success);
+}
+
+.scoreRing[data-score^="7"], .scoreRing[data-score^="8"] {
+  background: #84cc16;
+}
+
+.scoreRing[data-score^="5"], .scoreRing[data-score^="6"] {
+  background: var(--warning);
+}
+
+.scoreRing[data-score^="1"], .scoreRing[data-score^="2"], 
+.scoreRing[data-score^="3"], .scoreRing[data-score^="4"] {
+  background: var(--danger);
+}
+
+.scoreValue {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.scoreLabel {
+  font-size: 11px;
+}
+
+.resultEmoji {
+  font-size: 70px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.resultName {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.resultType {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.commentCard {
+  background: var(--card);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.comment {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.itemsCard {
+  background: var(--card);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.itemsTitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.itemsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  background: var(--accent);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.resultActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shareButton {
+  background: var(--accent);
+  color: white;
+  padding: 18px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.newButton {
+  background: var(--card);
+  color: white;
+  padding: 18px;
+  border-radius: 15px;
+  font-size: 16px;
+  border: 1px solid #333;
+}
+
+/* Reference */
+.referenceSection {
+  margin: 40px 0 20px;
+}
+
+.refTitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.refGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.refCard {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.refEmoji {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.refName {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.refHealth {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
